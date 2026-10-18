@@ -1,0 +1,46 @@
+d015_input_1 starting
+10:17:14 INFO [standalone] Identifying product | running | model=fal-ai/moondream3-preview/query | libraries=Pillow==12.3.0, fal-client==1.0.3, LangGraph==1.2.15 | duration=- | details={'reasoning': False, 'max_side': 1280, 'required': False, 'timeout_seconds': 90}
+d015_input_1 classifying
+d015_input_1 classifying
+d015_input_1 classifying
+10:17:18 INFO [standalone] Identifying product | review_required | model=fal-ai/moondream3-preview/query | libraries=Pillow==12.3.0, fal-client==1.0.3, LangGraph==1.2.15 | duration=4.019s | details={'reasoning': False, 'max_side': 1280, 'required': False, 'timeout_seconds': 90, 'label': 'UTI', 'category': 'sweater', 'kind': 'garment', 'confidence': None, 'review_required': True, 'model_kind': 'other', 'kind_source': 'physical_category', 'description': 'A dark navy blue crew neck sweatshirt featuring a rectangular graphic print on the front. The graphic depicts a stylized red and blue abstract design with X-shaped shapes and lines, framed by a light blue border. The sweatshirt has long sleeves, a ribbed cuffs and hem, and a simple crew neck collar.', 'cache_hit': False, 'cache_status': 'computed', 'model_invoked': True, 'pipeline_profile': 'faithful'}
+d015_input_1 classifying
+10:17:18 INFO [standalone] Locating product | running | model=fal-ai/moondream3-preview/detect | libraries=Pillow==12.3.0, fal-client==1.0.3, LangGraph==1.2.15 | duration=- | details={'max_side': 1280, 'timeout_seconds': 90}
+d015_input_1 locating
+d015_input_1 locating
+d015_input_1 locating
+10:17:21 INFO [standalone] Locating product | complete | model=fal-ai/moondream3-preview/detect | libraries=Pillow==12.3.0, fal-client==1.0.3, LangGraph==1.2.15 | duration=2.910s | details={'max_side': 1280, 'timeout_seconds': 90, 'bbox': [0.076171875, 0.0, 0.892578125, 1.0], 'cache_hit': False, 'model_invoked': True, 'cache_status': 'computed'}
+d015_input_1 locating
+10:17:21 INFO [standalone] Preparing | running | model=fal-ai/sam-3/image | libraries=NumPy==2.5.4, OpenCV==4.14.0.94, Pillow==12.3.0, fal-client==1.0.3, LangGraph==1.2.15 | duration=- | details={}
+d015_input_1 preparing
+d015_input_1 preparing
+d015_input_1 preparing
+10:18:31 INFO [standalone] Preparing | complete | model=fal-ai/sam-3/image | libraries=NumPy==2.5.4, OpenCV==4.14.0.94, Pillow==12.3.0, fal-client==1.0.3, LangGraph==1.2.15 | duration=69.928s | details={'strategy': 'classified_product', 'label': 'UTI', 'candidate_index': 0, 'candidate_count': 1, 'bbox': [57, 0, 644, 527], 'components_kept': 1, 'cache_status': 'computed', 'cache_hit': False, 'model_invoked': True, 'storage_uploads': 1}
+d015_input_1 preparing
+10:18:31 INFO [standalone] Preparing references | running | model=local | libraries=Pillow==12.3.0, fal-client==1.0.3, LangGraph==1.2.15 | duration=- | details={}
+d015_input_1 balancing_color
+d015_input_1 balancing_color
+10:18:34 INFO [standalone] Preparing references | complete | model=local | libraries=Pillow==12.3.0, fal-client==1.0.3, LangGraph==1.2.15 | duration=2.681s | details={'correction_applied': False, 'strength': 0.0, 'storage_uploads': 3, 'reused_uploads': 0}
+d015_input_1 balancing_color
+10:18:34 INFO [standalone] Creating photo | running | model=google/nano-banana-2.1/edit | libraries=fal-client==1.0.3, LangGraph==1.2.15 | duration=- | details={'resolution': '2K'}
+d015_input_1 generating
+d015_input_1 generating
+10:18:56 INFO [standalone] Creating photo | complete | model=google/nano-banana-2.1/edit | libraries=fal-client==1.0.3, LangGraph==1.2.15 | duration=22.209s | details={'resolution': '2K', 'input_image_count': 3, 'reference_policy': 'context_crop', 'reference_crop': [7, 0, 693, 527]}
+d015_input_1 generating
+10:18:56 INFO [standalone] Checking product | running | model=fal-ai/moondream3-preview/query | libraries=Pillow==12.3.0, fal-client==1.0.3, LangGraph==1.2.15 | duration=- | details={'timeout_seconds': 30, 'max_side': 768}
+d015_input_1 checking_product
+d015_input_1 checking_product
+d015_input_1 checking_product
+10:19:05 INFO [standalone] Checking product | review_required | model=fal-ai/moondream3-preview/query | libraries=Pillow==12.3.0, fal-client==1.0.3, LangGraph==1.2.15 | duration=8.733s | details={'timeout_seconds': 30, 'max_side': 768, 'model': 'fal-ai/moondream3-preview/query', 'after_repair': False, 'verdict': 'uncertain'}
+d015_input_1 checking_product
+10:19:05 INFO [standalone] Refining | running | model=fal-ai/birefnet/v2 | libraries=NumPy==2.5.4, OpenCV==4.14.0.94, Pillow==12.3.0, fal-client==1.0.3, LangGraph==1.2.15 | duration=- | details={}
+d015_input_1 finishing
+d015_input_1 finishing
+10:19:16 INFO [standalone] Refining | complete | model=fal-ai/birefnet/v2 | libraries=NumPy==2.5.4, OpenCV==4.14.0.94, Pillow==12.3.0, fal-client==1.0.3, LangGraph==1.2.15 | duration=11.565s | details={'output_cleanup': {'applied': False, 'removed_boxes': []}}
+d015_input_1 finishing
+10:19:16 INFO [standalone] Final check | running | model=local | libraries=NumPy==2.5.4, OpenCV==4.14.0.94, Pillow==12.3.0, fal-client==1.0.3, LangGraph==1.2.15 | duration=- | details={}
+d015_input_1 checking_quality
+d015_input_1 checking_quality
+10:19:24 INFO [standalone] Final check | complete | model=local | libraries=NumPy==2.5.4, OpenCV==4.14.0.94, Pillow==12.3.0, fal-client==1.0.3, LangGraph==1.2.15 | duration=7.709s | details={'storage_uploads': 1, 'color_fidelity': {'method': 'studio_neutrality_and_foreground_material_anchor', 'calibrated': False, 'applied': True, 'backdrop': {'applied': True, 'reason': 'consistent_neutral_studio_backdrop', 'gains_linear_rgb': [1.00919, 0.99935, 0.98003], 'reference_tiles': 12}, 'material': {'applied': True, 'reason': 'bounded_foreground_material_drift', 'source_median_lab': [14.349, 0.922, -3.406], 'generated_median_lab': [17.047, 1.359, -3.188], 'palette_disagreement': 0.667, 'lightness_offset': -1.2573, 'chroma_offset': [0.0, 0.0], 'chroma_gain': 1.01202, 'source_exposure_center': 15.283, 'generated_exposure_center': 17.798}, 'dark_fallback': {'applied': False, 'reason': 'material_anchor_available'}, 'source_support': {'accepted': False, 'reason': 'not_needed'}, 'fallback_material': {'applied': False, 'reason': 'not_needed'}}}
+d015_input_1 checking_quality
+d015_input_1 review_required
